@@ -105,7 +105,7 @@ in
 
     services.eco-server-logger = {
       enable = cfg.enableLogStreaming;
-      serverLogsPath = "/var/lib/${cfg.stateDirectory}/logs";
+      serverLogsPath = "/var/lib/${cfg.stateDirectory}/Logs/*.log";
       tag = "eco";
     };
   };
