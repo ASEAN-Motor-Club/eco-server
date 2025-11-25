@@ -1,0 +1,8 @@
+{
+  "BlockBulkActions": false,
+  "StatsGroupingDays": 2,
+  "MaxRecordsToGroup": 500000,
+  "KeepDetailsHours": 3,
+  "RebuildDatabaseOnExit": true,
+  "GroupingLevel": "GroupByEssentialFields"
+}

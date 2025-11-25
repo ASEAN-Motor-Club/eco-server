@@ -1,0 +1,6 @@
+{
+  "AudibleDistance": 32,
+  "ConversationalDistance": 3,
+  "AudioFadeModel": "ExponentialByDistance",
+  "AudioFadeIntensityByDistance": 1.0
+}

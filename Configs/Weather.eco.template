@@ -1,0 +1,28 @@
+{
+  "MinWeatherSystemLifespan": 5,
+  "MaxWeatherSystemLifespan": 10,
+  "MinClearWeatherDuration": 10,
+  "MaxClearWeatherDuration": 30,
+  "WeatherWeights": [
+    {
+      "Key": "LightRain",
+      "Weight": 80.0
+    },
+    {
+      "Key": "HeavyRain",
+      "Weight": 50.0
+    },
+    {
+      "Key": "Foggy",
+      "Weight": 110.0
+    },
+    {
+      "Key": "Cloudy1",
+      "Weight": 150.0
+    },
+    {
+      "Key": "Cloudy2",
+      "Weight": 150.0
+    }
+  ]
+}
