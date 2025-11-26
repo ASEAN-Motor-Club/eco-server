@@ -80,9 +80,7 @@ in
         Type = "simple";
         User = cfg.user;
         Group = "modders";
-        Restart = "always";
         # EnvironmentFile = lib.mkIf (cfg.credentialsFile != null) cfg.credentialsFile;
-        KillSignal = "SIGKILL";
         StateDirectory = cfg.stateDirectory;
         StateDirectoryMode = "770";
         StandardInput="socket";
@@ -91,6 +89,7 @@ in
       };
       script=''
         # ${lib.getExe serverUpdateScript}
+        cp --no-preserve=mode,ownership ${./Configs}/*.eco ./Configs
         exec ${steam-run}/bin/steam-run ./EcoServer -userToken="$(cat ${cfg.credentialsFile})"
       '';
     };
