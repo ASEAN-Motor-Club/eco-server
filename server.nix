@@ -2,8 +2,6 @@
 with lib;
 let
   cfg = config.services.eco-server;
-  # Paths
-  steamPath = "/home/${cfg.user}/.steam/steam";
 
   # Game Settings
   gameAppId = "739590"; # Steam App ID
@@ -88,7 +86,7 @@ in
         WorkingDirectory = "/var/lib/${cfg.stateDirectory}";
       };
       script=''
-        # ${lib.getExe serverUpdateScript}
+        ${lib.getExe serverUpdateScript}
         cp --no-preserve=mode,ownership ${./Configs}/*.eco ./Configs
         exec ${steam-run}/bin/steam-run ./EcoServer -userToken="$(cat ${cfg.credentialsFile})"
       '';
