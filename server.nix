@@ -88,6 +88,8 @@ in
       script=''
         ${lib.getExe serverUpdateScript}
         cp --no-preserve=mode,ownership ${./Configs}/*.eco ./Configs
+        mkdir -p Mods/UserCode
+        ${lib.concatStringsSep "\n" (lib.mapAttrsToList (name: path: "ln -sfn ${path} Mods/UserCode/${name}") cfg.mods)}
         exec ${steam-run}/bin/steam-run ./EcoServer -userToken="$(cat ${cfg.credentialsFile})"
       '';
     };
@@ -96,7 +98,6 @@ in
       isNormalUser = true;
       packages = [
         pkgs.steamcmd
-        mods.installModsScriptBin
       ];
     };
 

@@ -50,6 +50,11 @@ let
       default = "owner";
       description = "The player name that will be passed as the owner of the server";
     };
+    mods = mkOption {
+      type = types.attrsOf types.path;
+      default = {};
+      description = "A set of mods to install into Mods/UserCode. Key is the directory name, value is the path to the mod source.";
+    };
   };
 
 in {
