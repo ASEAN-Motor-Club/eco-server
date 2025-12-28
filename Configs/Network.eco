@@ -1,10 +1,11 @@
 {
+  "MaxConnections": 20,
   "PublicServer": true,
   "Playtime": "",
   "DiscordAddress": "https://discord.gg/gN9WttgVBu",
   "Password": "asean",
-  "Name": "The AMC Jamahiriya | Planned Economy | Low Collaboration",
-  "DetailedDescription": "Welcome to the AMC Jamahiriya.\n\nWe are building a harmonious socialist civilisation governed by reason and fairness inspired by the late Brotherly Leader Colonel Muammar Gaddafi. This server operates on a Planned Economy:\n\nMeteor: Abolished by the will of the People\nMeritocratic: Hard work contributes to the state and is rewarded fairly.\nRedistributive: Wealth is managed to ensure no citizen is left behind.\nEnlightened Governance: Laws are enacted to protect the environment and efficiency, not to punish.\n\nThe Goal: Build a Tier 4 civilization with zero ecological collapse and maximum prosperity for all citizens.\n\nJoin us to build the perfect society.",
+  "Name": "The AMC Community | Collaborative Building | Friendly",
+  "DetailedDescription": "Welcome to the AMC Community.\n\nWe are building a collaborative society governed by cooperation and mutual respect. This server focuses on building together:\n\nMeteor: Disabled to focus on building\nCollaborative: Helping each other is the key to success.\nSustainable: We manage our resources to ensure a green future.\nFriendly: A welcoming environment for all players.\n\nThe Goal: Build a Tier 4 civilization with zero ecological collapse and maximum prosperity for everyone.\n\nJoin us to build a better world.",
   "ServerCategory": "None",
   "IPAddress": "Any",
   "RemoteAddress": "",
