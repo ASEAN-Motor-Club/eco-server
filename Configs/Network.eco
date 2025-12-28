@@ -1,5 +1,5 @@
 {
-  "MaxConnections": 20,
+  "MaxConnections": -1,
   "PublicServer": true,
   "Playtime": "",
   "DiscordAddress": "https://discord.gg/gN9WttgVBu",
