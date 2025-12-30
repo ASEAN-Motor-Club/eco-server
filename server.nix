@@ -23,7 +23,7 @@ with lib; let
 
   discordLinkMod = pkgs.fetchzip {
     url = "https://github.com/Eco-DiscordLink/EcoDiscordPlugin/archive/refs/tags/3.6.0.zip";
-    hash = "sha256-1hbmcy5mcsql73a93cxkvcb0caw2y4kn2rv42vxfv3ax6n1pkrj2";
+    hash = "sha256-Mal9RTAVi3jiFklQPtKp5JYJgDRcE82AKprqJ8JW2x8=";
     stripRoot = false;
   };
 in {
