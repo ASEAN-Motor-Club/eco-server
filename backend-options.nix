@@ -1,6 +1,9 @@
-{ lib, config, ... }:
-with lib;
-let
+{
+  lib,
+  config,
+  ...
+}:
+with lib; let
   cfg = config;
   backendOptions = {
     enable = mkEnableOption "eco server";
@@ -55,8 +58,12 @@ let
       default = {};
       description = "A set of mods to install into Mods/UserCode. Key is the directory name, value is the path to the mod source.";
     };
+    discordlinkSecretFile = mkOption {
+      type = types.nullOr types.path;
+      default = null;
+      description = "Path to file containing the Discord bot token";
+    };
   };
-
 in {
   options = backendOptions;
 }

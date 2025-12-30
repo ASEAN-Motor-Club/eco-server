@@ -1,6 +1,6 @@
 {
-  "BotToken": "YOUR_BOT_TOKEN_HERE",
-  "DiscordServerId": "YOUR_GUILD_ID_HERE",
+  "BotToken": "INJECTED_AT_RUNTIME",
+  "DiscordServerId": "1341775494026231859",
   "AdminRoles": [
     "Admin",
     "Eco Admins",
@@ -14,7 +14,7 @@
   "ChatSyncMode": "Broadcast",
   "ChatChannelLinks": [
     {
-      "DiscordChannelId": "YOUR_CHAT_CHANNEL_ID",
+      "DiscordChannelId": "1455485088799129741",
       "EcoChannel": "General",
       "Direction": "Duplex",
       "UseTimestamp": true,
