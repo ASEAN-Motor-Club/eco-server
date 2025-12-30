@@ -33,8 +33,8 @@ in
 
     services.eco-server.mods = {
       "DiscordLink" = pkgs.fetchzip {
-        url = "https://github.com/Eco-DiscordLink/EcoDiscordPlugin/releases/download/3.6.0/DiscordLink_3.6.0.zip";
-        hash = ""; # Update this hash after first build failure
+        url = "https://github.com/Eco-DiscordLink/EcoDiscordPlugin/archive/refs/tags/3.6.0.zip";
+        hash = "sha256-1hbmcy5mcsql73a93cxkvcb0caw2y4kn2rv42vxfv3ax6n1pkrj2";
         stripRoot = false;
       };
     };
