@@ -21,9 +21,19 @@ with lib; let
   '';
   steam-run = (pkgs.steam.override {extraPkgs = pkgs: [pkgs.openssl pkgs.libgdiplus];}).run;
 
+  # Pre-compiled DLLs from mod.io - DiscordLink
   discordLinkMod = pkgs.fetchzip {
-    url = "https://github.com/Eco-DiscordLink/EcoDiscordPlugin/archive/refs/tags/3.6.0.zip";
-    hash = "sha256-Mal9RTAVi3jiFklQPtKp5JYJgDRcE82AKprqJ8JW2x8=";
+    url = "https://g-6.modapi.io/v1/games/6/mods/77/files/6844411/download";
+    hash = "sha256-pGD25hIZvK2bfr+QxrjyEDcNpB+QehkTYIBKxk3D9eo=";
+    extension = "zip";
+    stripRoot = false;
+  };
+
+  # Pre-compiled DLLs from mod.io - MightyMooseCore (required dependency for DiscordLink)
+  mightyMooseCore = pkgs.fetchzip {
+    url = "https://g-6.modapi.io/v1/games/6/mods/3561559/files/6844389/download";
+    hash = "sha256-jbwUJ3YkW9GZA2b3+lkD3VO/vMrYL7m40jWKP9VgDaw=";
+    extension = "zip";
     stripRoot = false;
   };
 in {
@@ -97,7 +107,14 @@ in {
       };
       script = ''
         ${lib.getExe serverUpdateScript}
+        # Remove potential staley symlink from previous attempts to avoid compilation errors
+        rm -rf Mods/UserCode/DiscordLink
+
+        # Copy Configs
         cp --no-preserve=mode,ownership ${./Configs}/*.eco ./Configs
+        # Copy Config templates from mods (if any)
+        cp -n ${mightyMooseCore}/Configs/*.template ./Configs/ 2>/dev/null || :
+        cp -n ${discordLinkMod}/Configs/*.template ./Configs/ 2>/dev/null || :
 
         # Inject DiscordLink bot token from secret if provided
         ${lib.optionalString (cfg.discordlinkSecretFile != null) ''
@@ -106,8 +123,15 @@ in {
           mv ./Configs/DiscordLink.eco.tmp ./Configs/DiscordLink.eco
         ''}
 
+        # Install MightyMoose mods (pre-compiled DLLs from mod.io)
+        # Copy instead of symlink because Eco server needs write access to asset bundles (Permission Denied error)
+        rm -rf Mods/MightyMoose
+        mkdir -p Mods/MightyMoose
+        cp -r --no-preserve=mode ${mightyMooseCore}/Mods/MightyMoose/* Mods/MightyMoose/
+        cp -r --no-preserve=mode ${discordLinkMod}/Mods/MightyMoose/DiscordLink Mods/MightyMoose/DiscordLink
+
+        # Install any additional user mods to UserCode
         mkdir -p Mods/UserCode
-        ln -sfn ${discordLinkMod} Mods/UserCode/DiscordLink
         ${lib.concatStringsSep "\n" (lib.mapAttrsToList (name: path: "ln -sfn ${path} Mods/UserCode/${name}") cfg.mods)}
         exec ${steam-run}/bin/steam-run ./EcoServer -userToken="$(cat ${cfg.credentialsFile})"
       '';
