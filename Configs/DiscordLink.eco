@@ -1,0 +1,67 @@
+{
+  "BotToken": "YOUR_BOT_TOKEN_HERE",
+  "DiscordServerId": "YOUR_GUILD_ID_HERE",
+  "AdminRoles": [
+    "Admin",
+    "Eco Admins",
+    "Administrator",
+    "Moderator"
+  ],
+  "DiscordServerOwnerIsAdmin": true,
+  "ServerName": null,
+  "ServerDescription": null,
+  "ConnectionInfo": null,
+  "ChatSyncMode": "Broadcast",
+  "ChatChannelLinks": [
+    {
+      "DiscordChannelId": "YOUR_CHAT_CHANNEL_ID",
+      "EcoChannel": "General",
+      "Direction": "Duplex",
+      "UseTimestamp": true,
+      "HereAndEveryoneMentionPermission": "Ignore",
+      "MentionPermissions": "Ignore"
+    }
+  ],
+  "TradeFeedChannels": [],
+  "CraftingFeedChannels": [],
+  "ServerStatusFeedChannels": [],
+  "PlayerStatusFeedChannels": [],
+  "ElectionFeedChannels": [],
+  "ServerLogFeedChannels": [],
+  "UseTradeWatcherFeeds": true,
+  "ServerInfoDisplayChannels": [],
+  "WorkPartyDisplayChannels": [],
+  "ElectionDisplayChannels": [],
+  "CurrencyDisplayChannels": [],
+  "MapDisplayChannels": [],
+  "LayerDisplayChannels": [],
+  "SnippetInputChannels": [],
+  "UseLinkedAccountRole": true,
+  "UseDemographicRoles": true,
+  "DemographicReplacementRoles": [
+    {
+      "Name": "everyone",
+      "RoleName": "Eco Everyone"
+    },
+    {
+      "Name": "admins",
+      "RoleName": "Eco Admins"
+    }
+  ],
+  "UseSpecialtyRoles": true,
+  "UseElectedTitleRoles": true,
+  "MaxTradeWatcherDisplaysPerUser": 5,
+  "InviteMessage": "Join us on Discord!\\n[LINK]",
+  "LogLevel": "Information",
+  "BackendLogLevel": "None",
+  "TraceFileLogging": false,
+  "UseVerboseDisplay": false,
+  "EmoteIconSubstitutions": [
+    {
+      "DiscordEmoteKey": "DiscordLink",
+      "EcoIconKey": "DiscordLinkLogo"
+    }
+  ],
+  "MinEmbedSizeForFooter": "Medium",
+  "EmbedColorHex": "#7289da"
+}

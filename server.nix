@@ -31,6 +31,14 @@ in
       allowedUDPPorts = [cfg.gameServerPort];
     };
 
+    services.eco-server.mods = {
+      "DiscordLink" = pkgs.fetchzip {
+        url = "https://github.com/Eco-DiscordLink/EcoDiscordPlugin/releases/download/3.6.0/DiscordLink_3.6.0.zip";
+        hash = ""; # Update this hash after first build failure
+        stripRoot = false;
+      };
+    };
+
     nixpkgs.config.allowUnfreePredicate = lib.mkDefault (pkg: builtins.elem (lib.getName pkg) [
       "steam"
       "steamcmd"
