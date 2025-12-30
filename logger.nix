@@ -1,9 +1,12 @@
-{ lib, pkgs, config, ...}:
-with lib;
-let
-  cfg = config.services.eco-server-logger;
-in
 {
+  lib,
+  pkgs,
+  config,
+  ...
+}:
+with lib; let
+  cfg = config.services.eco-server-logger;
+in {
   options.services.eco-server-logger = {
     enable = lib.mkEnableOption "Eco server log streaming";
     serverLogsPath = mkOption {
