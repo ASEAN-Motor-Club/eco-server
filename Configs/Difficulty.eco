@@ -23,7 +23,7 @@
       "SpecialtyRefundPercentage": 0.0,
       "GainCharacterExperienceWithSpecialtyExperience": 0.0,
       "StackSizeMultiplier": 5.0,
-      "WeightMultiplier": 2.0,
+      "WeightMultiplier": 0.5,
       "FuelEfficiencyMultiplier": 1.0,
       "GrowthRateMultiplier": 1.0,
       "ConnectionRangeMultiplier": 1.0,
