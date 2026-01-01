@@ -20,18 +20,72 @@
       "UseTimestamp": true
     }
   ],
-  "TradeFeedChannels": [],
-  "CraftingFeedChannels": [],
-  "ServerStatusFeedChannels": [],
-  "PlayerStatusFeedChannels": [],
-  "ElectionFeedChannels": [],
-  "ServerLogFeedChannels": [],
+  "TradeFeedChannels": [
+    {
+      "DiscordChannelId": "1455503044639719444"
+    }
+  ],
+  "CraftingFeedChannels": [
+    {
+      "DiscordChannelId": "1455502237416689727"
+    }
+  ],
+  "ServerStatusFeedChannels": [
+    {
+      "DiscordChannelId": "1455502193904980028"
+    }
+  ],
+  "PlayerStatusFeedChannels": [
+    {
+      "DiscordChannelId": "1455502213567746048"
+    }
+  ],
+  "ElectionFeedChannels": [
+    {
+      "DiscordChannelId": "1455502257737957538"
+    }
+  ],
+  "ServerLogFeedChannels": [
+    {
+      "DiscordChannelId": "1455502296816291993"
+    }
+  ],
   "UseTradeWatcherFeeds": true,
-  "ServerInfoDisplayChannels": [],
+  "ServerInfoDisplayChannels": [
+    {
+      "UseName": true,
+      "UseDescription": true,
+      "UseLogo": true,
+      "UseConnectionInfo": true,
+      "UsePlayerCount": true,
+      "UsePlayerList": true,
+      "UsePlayerListLoggedInTime": false,
+      "UsePlayerListExhaustionTime": false,
+      "UseIngameTime": true,
+      "UseTimeRemaining": true,
+      "UseServerTime": true,
+      "UseExhaustionResetServerTime": false,
+      "UseExhaustionResetTimeLeft": false,
+      "UseExhaustedPlayerCount": false,
+      "UseElectionCount": true,
+      "UseElectionList": true,
+      "UseLawCount": true,
+      "UseLawList": true,
+      "DiscordChannelId": "1455507724241469631"
+    }
+  ],
   "WorkPartyDisplayChannels": [],
-  "ElectionDisplayChannels": [],
+  "ElectionDisplayChannels": [
+    {
+      "DiscordChannelId": "1455502257737957538"
+    }
+  ],
   "CurrencyDisplayChannels": [],
-  "MapDisplayChannels": [],
+  "MapDisplayChannels": [
+    {
+    "DiscordChannelId": "1455639971737112687"
+    }
+  ],
   "LayerDisplayChannels": [],
   "SnippetInputChannels": [],
   "UseLinkedAccountRole": true,
