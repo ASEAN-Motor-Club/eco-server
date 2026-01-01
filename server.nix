@@ -46,8 +46,8 @@ in {
 
   config = mkIf cfg.enable {
     networking.firewall = lib.mkIf cfg.openFirewall {
-      allowedTCPPorts = [cfg.webServerPort];
-      allowedUDPPorts = [cfg.gameServerPort];
+      allowedTCPPorts = [cfg.gameServerPort cfg.webServerPort];
+      allowedUDPPorts = [cfg.gameServerPort cfg.webServerPort];
     };
 
     nixpkgs.config.allowUnfreePredicate = lib.mkDefault (pkg:
