@@ -69,12 +69,12 @@
   "SettlementFoundationBaseInfluence": [
     45.0,
     150.0,
-    1400.0
+    2000.0
   ],
   "SettlementInfluenceMultiplier": [
     1.0,
     1.0,
-    1.0
+    10.0
   ],
   "ScaleInfluenceBasedOnWorldSize": true,
   "BaseInfluenceRadiusFoundationMovementAllowedAfterFounding": 50,
