@@ -12,7 +12,7 @@
     "GenerateRandomWorld": false,
     "AdvancedGameSettings": {
       "MeteorImpactInDays": 60.0,
-      "MaxProfessionsPerCitizen": 3.0,
+      "MaxProfessionsPerCitizen": 4.0,
       "MaxSpecialtiesPerCitizen": 33.0,
       "SkillCostMultiplier": 1.0,
       "CraftResourceMultiplier": 1.0,
