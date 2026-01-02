@@ -20,10 +20,10 @@
     nixosModules.amc = {config, lib, pkgs, ...}: {
       imports = [./server.nix];
       config.services.eco-server.mods = lib.mkDefault {
-        # "StorageControl" = pkgs.fetchzip {
-        #   url = "https://g-6.modapi.io/v1/games/6/mods/5203090/files/6835797/download";
-        #   hash = "";
-        # };
+         "StorageControl" = pkgs.fetchzip {
+           url = "https://g-6.modapi.io/v1/games/6/mods/5203090/files/6835797/download";
+           hash = "sha256-QHm1HVzRJ+pK2VQ8P3CbAwkoy4oS3myYGXAAJVGwWlA=";
+         };
       };
     };
 
