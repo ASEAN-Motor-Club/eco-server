@@ -20,8 +20,8 @@
     nixosModules.amc = {config, lib, pkgs, ...}: {
       imports = [./server.nix];
       config.services.eco-server.mods = lib.mkDefault {
-        # "ModFolderName" = pkgs.fetchzip {
-        #   url = "https://mod.io/download/...";
+        # "StorageControl" = pkgs.fetchzip {
+        #   url = "https://g-6.modapi.io/v1/games/6/mods/5203090/files/6835797/download"; # QoL MOD to allow storage management
         #   hash = "";
         # };
       };
