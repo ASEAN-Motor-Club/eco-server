@@ -80,13 +80,21 @@
       "DiscordChannelId": "1455502257737957538"
     }
   ],
-  "CurrencyDisplayChannels": [],
-  "MapDisplayChannels": [
+  "CurrencyDisplayChannels": [
     {
-    "DiscordChannelId": "1455639971737112687"
+    "DiscordChannelId": 1456932721774559252
     }
   ],
-  "LayerDisplayChannels": [],
+  "MapDisplayChannels": [
+    {
+    "DiscordChannelId": 1455639971737112687
+    }
+  ],
+  "LayerDisplayChannels": [
+    {
+    "DiscordChannelId": 1455639971737112687
+    }
+  ],
   "SnippetInputChannels": [],
   "UseLinkedAccountRole": true,
   "UseDemographicRoles": true,
