@@ -7,7 +7,7 @@
     "AnimalBehavior": "AttackNormally",
     "SimulationLevel": "Normal",
     "ExhaustionEnabled": false,
-    "HasMeteor": false,
+    "HasMeteor": true,
     "AllowFriendsToJoin": true,
     "GenerateRandomWorld": false,
     "AdvancedGameSettings": {
