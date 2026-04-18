@@ -4,8 +4,8 @@
   "MapSizePreset": "Small",
   "Dimensions": {
     "$id": "2",
-    "WorldWidth": 72,
-    "WorldLength": 72
+    "WorldWidth": 100,
+    "WorldLength": 100
   },
   "WaterLevel": 60,
   "MaxGenerationHeight": 120,
@@ -18,7 +18,7 @@
       "$type": "Eco.WorldGenerator.VoronoiModule, Eco.WorldGenerator",
       "Config": {
         "$id": "5",
-        "Seed": 1244446694,
+        "Seed": 324234694,
         "PointRadius": 10.0,
         "LandPercentRange": {
           "min": 0.65,

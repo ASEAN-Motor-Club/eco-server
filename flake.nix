@@ -17,7 +17,12 @@
 
     # AMC-specific server configuration
     # Usage: imports = [ eco-server.nixosModules.amc ];
-    nixosModules.amc = {config, lib, pkgs, ...}: {
+    nixosModules.amc = {
+      config,
+      lib,
+      pkgs,
+      ...
+    }: {
       imports = [./server.nix];
       services.eco-server.mods = {
         "StorageControl" = pkgs.fetchzip {
